@@ -437,6 +437,11 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .cs-car{left:8cqi;width:84cqi;top:25.5cqi;height:auto;filter:drop-shadow(0 2.5cqi 3cqi rgba(0,0,0,.5))}
 .cs-foot{background:linear-gradient(transparent,rgba(11,26,46,.0))}
 
+.ci{background:radial-gradient(110% 70% at 30% 75%,#3a2a1c 0%,#0b1a2e 62%)}
+.ci .cv-kick{background:#e08a4b}
+.ci-img{left:0;width:100cqi;bottom:19cqi;height:auto;filter:drop-shadow(0 2cqi 3cqi rgba(0,0,0,.5))}
+.ci .cv-stat b{color:#e8a06b}
+
 /* articles hub */
 .acover{width:min(100%,340px);justify-self:center}
 .acard{grid-template-columns:minmax(0,340px) minmax(0,1fr)!important}
@@ -489,7 +494,7 @@ a.chip:active{transform:scale(.97)}
 <header class="bar gut">
   <div class="wrap">
     <a class="logo" href="index.html" aria-label="Alex Aguilar Viel, portfolio home"></a>
-    <nav class="nav" aria-label="Sections"><a href="#data-analysis">Data &amp; Analysis</a><a href="#contact">Contact</a></nav>
+    <nav class="nav" aria-label="Sections"><a href="#data-analysis">Data &amp; Analysis</a><a href="#powertrain">Powertrain</a><a href="#contact">Contact</a></nav>
     <div class="bar-r">
       <a class="btn line back" href="index.html"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg><span class="t">Portfolio</span></a>
       <button class="tt" id="theme-toggle" type="button" aria-label="Switch between light and dark theme">
@@ -509,17 +514,17 @@ a.chip:active{transform:scale(.97)}
           <p class="status"><i></i>Articles · Race-car engineering</p>
           <h1>Articles</h1>
           <p class="lede">Technical notes on how race cars are measured, understood and made faster. Each one explains the physics, builds the method and tests it on data. Grouped by area, with more areas on the way.</p>
-          <nav class="chips" aria-label="Areas"><a class="chip" href="#data-analysis">Data &amp; Analysis<b>1</b></a><span class="chip off">Aerodynamics<i>Soon</i></span><span class="chip off">Powertrain<i>Soon</i></span><span class="chip off">Vehicle Dynamics<i>Soon</i></span></nav>
+          <nav class="chips" aria-label="Areas"><a class="chip" href="#data-analysis">Data &amp; Analysis<b>1</b></a><a class="chip" href="#powertrain">Powertrain<b>1</b></a><span class="chip off">Aerodynamics<i>Soon</i></span><span class="chip off">Vehicle Dynamics<i>Soon</i></span></nav>
         </div>
         <div class="hub-cover"><a class="cover cs" href="articles.html" aria-label="Tech Notes: race-car engineering articles by area. Open the articles page">
   <span class="cv-top"><span>Vol. 1</span><span>Race-car engineering, explained</span><span>2026</span></span>
   <span class="cv-mast">Tech<b>Notes</b></span>
   <span class="cv-by">by Alex Aguilar Viel</span>
-  <span class="cs-list"><span class="cs-row"><span class="cs-k">Data &amp; Analysis<i>Nº 01</i></span><span class="cs-t">Downforce from the dampers</span></span><span class="cs-row off"><span class="cs-k">Aerodynamics<i>Soon</i></span><span class="cs-t">Wings, floors and wakes</span></span><span class="cs-row off"><span class="cs-k">Powertrain<i>Soon</i></span><span class="cs-t">Hybrid power, deployed</span></span><span class="cs-row off"><span class="cs-k">Vehicle Dynamics<i>Soon</i></span><span class="cs-t">Tyres, balance and setup</span></span></span>
+  <span class="cs-list"><span class="cs-row"><span class="cs-k">Data &amp; Analysis<i>Nº 01</i></span><span class="cs-t">Downforce from the dampers</span></span><span class="cs-row"><span class="cs-k">Powertrain<i>Nº 02</i></span><span class="cs-t">Why F1 engines burn lean</span></span><span class="cs-row off"><span class="cs-k">Aerodynamics<i>Soon</i></span><span class="cs-t">Wings, floors and wakes</span></span><span class="cs-row off"><span class="cs-k">Vehicle Dynamics<i>Soon</i></span><span class="cs-t">Tyres, balance and setup</span></span></span>
   <img class="cs-car" src="dpd/gt3.webp" alt="" width="1100" height="763" loading="lazy">
   <span class="cv-foot cs-foot">
     <span class="cv-stat"><b>4</b><span>areas,<br>one method each</span></span>
-    <span class="cv-next"><b>Out now</b>Nº 01 · Data &amp; Analysis</span>
+    <span class="cv-next"><b>Out now</b>Nº 02 · Powertrain</span>
     <span class="cv-bar" aria-hidden="true"></span>
   </span>
 </a></div>
@@ -551,6 +556,34 @@ a.chip:active{transform:scale(.97)}
             <p class="desc">How to get downforce and C<sub>L</sub>A out of the four damper potentiometers every race car logs. The physics, a six-step method, a per-section C<sub>L</sub>A map of a simulated GT3 lap of Barcelona with a known answer, and real Formula Student data with and without wings.</p>
             <div class="figs num"><div><b>2.83</b><span>C<sub>L</sub>A recovered, true 2.80</span></div><div><b>8</b><span>corner groups mapped</span></div><div><b>±4.5<em>%</em></b><span>per 5% spring-rate error</span></div></div>
             <a class="more" href="damper-downforce.html">Read the article <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+  <section class="sec f2 gut" id="powertrain">
+    <div class="wrap">
+      <div class="head"><h2 class="rv">Powertrain</h2><p class="rv" style="--d:.05s">Where the energy in the fuel goes, and how to keep more of it. <span class="cnt">1 article</span></p></div>
+      <div class="alist">
+        <article class="acard rv">
+          <div class="acover"><a class="cover ci" href="f1-lean-burn.html" aria-label="Tech Notes issue 02: Why F1 engines burn lean. Open the article">
+  <span class="cv-top"><span>Nº 02</span><span>Race-car engineering, explained</span><span>Nov 2026</span></span>
+  <span class="cv-mast">Tech<b>Notes</b></span>
+  <span class="cv-by">by Alex Aguilar Viel</span>
+  <span class="cv-hl"><span class="cv-kick">Powertrain</span><span class="cv-h">Why F1 engines burn lean</span><span class="cv-dk">Pre-chambers, knock and 2026.</span></span>
+  <img class="ci-img" src="ice/split-turbo.webp" alt="" width="914" height="342">
+  <span class="cv-foot">
+    <span class="cv-stat"><b>52%</b><span>peak efficiency,<br>pre-chamber</span></span>
+    <span class="cv-next"><b>Next issues</b>Aerodynamics<br>Vehicle Dynamics</span>
+    <span class="cv-bar" aria-hidden="true"></span>
+  </span>
+</a></div>
+          <div class="abody">
+            <p class="meta">Nov 2026 · 10 min read</p>
+            <h3><a href="f1-lean-burn.html">Why F1 engines burn lean</a></h3>
+            <p class="desc">Since 2014 F1 limits fuel flow, not engine size, so power is efficiency. A 0D model of the 1.6 L V6 with a knock criterion shows why the engines run lean with pre-chamber ignition, where that stops paying, and what the 2026 rules change.</p>
+            <div class="figs num"><div><b>52.0<em>%</em></b><span>peak efficiency, pre-chamber</span></div><div><b>+2.8<em> pts</em></b><span>over a spark plug</span></div><div><b>−32<em>%</em></b><span>indicated power in 2026</span></div></div>
+            <a class="more" href="f1-lean-burn.html">Read the article <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
           </div>
         </article>
       </div>
