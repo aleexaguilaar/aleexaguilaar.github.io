@@ -387,6 +387,13 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .duo .lg{flex-direction:column;align-items:stretch}.duo .lg .cbar{flex-basis:auto;max-width:380px}
 .media>.lg{flex-direction:column;align-items:stretch}.media>.lg .cbar{flex-basis:auto;max-width:380px}
 .hero .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:36px}
+.slices,.slices figure{background:#07101d}.slices img{object-fit:cover;padding:0!important;transform:scale(1.02)}.slices figure:hover img{transform:scale(1.07)}
+.gal-hero,.gal-row figure{position:relative;margin:0;border-radius:20px;overflow:hidden;background:#07101d}
+.gal-hero img,.gal-row img{display:block;width:100%;height:auto}
+.gal-row{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(10px,1.4vw,18px);margin-top:clamp(10px,1.4vw,18px)}
+.gal-row figure{border-radius:14px}
+.gal-hero .tag,.gal-row .tag{position:absolute;left:12px;bottom:12px;padding:5px 11px;border-radius:999px;background:rgba(6,17,30,.72);color:#eef4fb;font-size:12.5px;font-weight:600;letter-spacing:.01em}
+@media (max-width:760px){.gal-row{grid-template-columns:1fr}}
 </style>
 <script type="module" src="tfg/model-viewer.min.js"></script>
 
@@ -396,7 +403,8 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
   <div class="wrap">
     <a class="logo" href="index.html" aria-label="Alex Aguilar Viel, portfolio home"></a>
     <nav class="nav" aria-label="Sections">
-      <a href="#method">Method</a>
+      <a href="#renders">Renders</a>
+<a href="#method">Method</a>
       <a href="#front-wing">Front wing</a>
       <a href="#rear-wing">Rear wing</a>
       <a href="#full-car">Full car</a>
@@ -425,8 +433,8 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
           <div class="cta"><a class="btn fill" href="https://www.linkedin.com/in/alex-aguilar-viel-b979a1293/details/projects/" target="_blank" rel="noopener">Read the full thesis <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a></div>
         </div>
         <div class="slices">
-          <figure><img src="tfg/fw_render.webp" alt="Front wing, final version V8, rendered in carbon fibre" width="1144" height="523"></figure>
-          <figure><img src="tfg/rw_render.webp" alt="Rear wing, final version V7, rendered in carbon fibre" width="1144" height="689"></figure>
+          <figure><img src="tfg/fw_studio.webp" alt="Front wing, final version V8, rendered in the AAV livery" width="1600" height="900"></figure>
+          <figure><img src="tfg/rw_studio.webp" alt="Rear wing, final version V7, rendered in the AAV livery" width="1600" height="900"></figure>
           <svg class="cut" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="55" y1="0" x2="45" y2="100"/></svg>
         </div>
       </div>
@@ -444,7 +452,19 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
     </div>
   </section>
 
-  <section class="sec f1 gut" id="method">
+  <section class="sec gut" id="renders">
+<div class="wrap">
+<div class="head"><h2 class="rv">The car, in my livery</h2><p class="rv" style="--d:.05s">Both final wings fitted to the reference 2026 car and rendered in Blender Cycles: navy paint, exposed carbon on the wing elements and floor, and my AAV logo. Same geometry that went through CFD.</p></div>
+<figure class="gal-hero rv rv-clip"><img src="tfg/g_car_hero.webp" alt="Three-quarter front render of the 2026 F1 car in the AAV livery, Corner Mode" width="2000" height="1125" loading="lazy"><figcaption class="tag">Corner Mode · Z</figcaption></figure>
+<div class="gal-row">
+<figure class="rv"><img src="tfg/g_car_hero_x.webp" alt="Three-quarter front render in Straight Mode, both wings at minimum incidence" width="1400" height="788" loading="lazy"><figcaption class="tag">Straight Mode · X</figcaption></figure>
+<figure class="rv" style="--d:.06s"><img src="tfg/g_car_side.webp" alt="Side render of the car in the AAV livery" width="1400" height="787" loading="lazy"><figcaption class="tag">Side</figcaption></figure>
+<figure class="rv" style="--d:.12s"><img src="tfg/g_car_rear.webp" alt="Three-quarter rear render showing the rear wing in the AAV livery" width="1400" height="788" loading="lazy"><figcaption class="tag">Rear three-quarter</figcaption></figure>
+</div>
+</div>
+</section>
+
+<section class="sec f1 gut" id="method">
     <div class="wrap">
       <div class="head"><h2 class="rv">Method</h2><p class="rv" style="--d:.06s">A chain of increasing fidelity: cheap 2D screening chooses the airfoils, expensive 3D runs are spent only on geometry that has earned them.</p></div>
       <ol class="pipe">
@@ -474,7 +494,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
           </div>
           <p class="rv" style="--d:.15s">Up from 3217 N in V1 (+42.8%), with efficiency held at about 16.</p>
         </div>
-        <figure class="open-pic rv"><img src="tfg/fw_r_z.webp" alt="Final front wing, version V8, rendered from the author's CAD" width="1600" height="882"></figure>
+        <figure class="open-pic rv"><img src="tfg/fw_r_z.webp" alt="Final front wing, version V8, rendered in the AAV livery" width="1600" height="808"></figure>
       </div>
 
       <div class="blk">
@@ -510,7 +530,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
         <div class="media">
           <div class="pair stack">
             <figure class="shot cut rv"><img src="tfg/fw_r_v1.webp" alt="Front wing first version V1, rendered from CAD" width="1600" height="882" loading="lazy"><span class="tag">V1</span></figure>
-            <figure class="shot cut rv" style="--d:.08s"><img src="tfg/fw_r_z.webp" alt="Front wing final version V8, rendered from CAD" width="1600" height="882" loading="lazy"><span class="tag">V8</span></figure>
+            <figure class="shot cut rv" style="--d:.08s"><img src="tfg/fw_r_v8.webp" alt="Front wing final version V8, rendered from CAD" width="1600" height="882" loading="lazy"><span class="tag">V8</span></figure>
           </div>
         </div>
         <div>
@@ -559,8 +579,8 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
       <div class="wide">
         <div class="head" style="margin-bottom:clamp(28px,3vw,44px)"><h3 class="h3 rv">Straight Mode</h3><p class="rv" style="--d:.05s">The 2026 rules let the flaps feather on the straights. Same mesh, same conditions as V8, flaps at minimum incidence.</p></div>
         <div class="pair duo geo-pair">
-          <figure class="shot cut rv"><img src="tfg/fw_r_z.webp" alt="Front wing in Corner Mode" width="1600" height="882" loading="lazy"><span class="tag">Corner Mode · Z</span></figure>
-          <figure class="shot cut rv" style="--d:.08s"><img src="tfg/fw_r_x.webp" alt="Front wing in Straight Mode, flaps at minimum incidence" width="1600" height="882" loading="lazy"><span class="tag">Straight Mode · X</span></figure>
+          <figure class="shot cut rv"><img src="tfg/fw_r_z.webp" alt="Front wing in Corner Mode" width="1600" height="808" loading="lazy"><span class="tag">Corner Mode · Z</span></figure>
+          <figure class="shot cut rv" style="--d:.08s"><img src="tfg/fw_r_x.webp" alt="Front wing in Straight Mode, flaps at minimum incidence" width="1600" height="808" loading="lazy"><span class="tag">Straight Mode · X</span></figure>
         </div>
         <div class="pair duo vpair">
             <figure class="shot rv"><video poster="tfg/fw_side_z.jpg" autoplay muted loop playsinline preload="metadata" width="1280" height="520" aria-label="Side velocity plane sweeping across the span of the front wing, Corner Mode"><source src="tfg/fw_side_z.mp4" type="video/mp4"></video><span class="tag">Corner Mode · Z</span></figure>
@@ -593,7 +613,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
           </div>
           <p class="rv" style="--d:.15s">Up from 2108 N in V1 (+20.9%), with efficiency kept in a narrow 5.1 to 5.8 band.</p>
         </div>
-        <figure class="open-pic rv"><img src="tfg/rw_r_z.webp" alt="Final rear wing, version V7, rendered from the author's CAD" width="1600" height="950"></figure>
+        <figure class="open-pic rv"><img src="tfg/rw_r_z.webp" alt="Final rear wing, version V7, rendered in the AAV livery" width="1600" height="1062"></figure>
       </div>
 
       <div class="blk rev">
@@ -677,8 +697,8 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
       <div class="wide">
         <div class="head" style="margin-bottom:clamp(28px,3vw,44px)"><h3 class="h3 rv">Straight Mode</h3><p class="rv" style="--d:.05s">Flaps opened to minimum incidence. Unlike the front wing, efficiency goes up: drag falls faster than downforce.</p></div>
         <div class="pair duo geo-pair">
-          <figure class="shot cut rv"><img src="tfg/rw_r_z.webp" alt="Rear wing in Corner Mode" width="1600" height="950" loading="lazy"><span class="tag">Corner Mode · Z</span></figure>
-          <figure class="shot cut rv" style="--d:.08s"><img src="tfg/rw_r_x.webp" alt="Rear wing in Straight Mode, flaps at minimum incidence" width="1600" height="950" loading="lazy"><span class="tag">Straight Mode · X</span></figure>
+          <figure class="shot cut rv"><img src="tfg/rw_r_z.webp" alt="Rear wing in Corner Mode" width="1600" height="1062" loading="lazy"><span class="tag">Corner Mode · Z</span></figure>
+          <figure class="shot cut rv" style="--d:.08s"><img src="tfg/rw_r_x.webp" alt="Rear wing in Straight Mode, flaps at minimum incidence" width="1600" height="1062" loading="lazy"><span class="tag">Straight Mode · X</span></figure>
         </div>
         <div class="pair duo vpair">
             <figure class="shot rv"><video poster="tfg/rw_side_z.jpg" autoplay muted loop playsinline preload="metadata" width="1280" height="566" aria-label="Side velocity plane sweeping across the span of the rear wing, Corner Mode"><source src="tfg/rw_side_z.mp4" type="video/mp4"></video><span class="tag">Corner Mode · Z</span></figure>
@@ -706,7 +726,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
           </div>
           <p class="rv" style="--d:.15s">Net downforce with both wings fitted, for 2213 N of drag. In Straight Mode total drag falls only 11.7%, although the wings alone shed 54.4%.</p>
         </div>
-        <figure class="open-pic rv"><img src="tfg/car_r_z.webp" alt="Reference 2026 F1 car with both final wings in Corner Mode, rendered from CAD" width="1342" height="922"></figure>
+        <figure class="open-pic rv"><img src="tfg/car_r_z.webp" alt="Reference 2026 F1 car with both final wings in Corner Mode, rendered from CAD" width="1342" height="974"></figure>
       </div>
 
       <div class="intro">
@@ -733,8 +753,8 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
       <div class="wide">
         <div class="head" style="margin-bottom:clamp(28px,3vw,44px)"><h3 class="h3 rv">Corner Mode against Straight Mode</h3><p class="rv" style="--d:.05s">Both wings switch at once: the front flaps feather and the rear flaps open. Same car, same mesh, same 60 m/s; the forces of each configuration are below.</p></div>
         <div class="pair duo geo-pair">
-          <figure class="shot cut rv"><img src="tfg/car_r_z.webp" alt="Full car in Corner Mode" width="1342" height="922" loading="lazy"><span class="tag">Corner Mode · Z</span><div class="gres num"><div><b>3674<small> N</small></b><span>downforce</span></div><div><b>2213<small> N</small></b><span>drag</span></div><div><b>1.67<small> m²</small></b><span>C<sub>L</sub>A</span></div></div></figure>
-          <figure class="shot cut rv" style="--d:.08s"><img src="tfg/car_r_x.webp" alt="Full car in Straight Mode, both wings at minimum incidence" width="1342" height="922" loading="lazy"><span class="tag">Straight Mode · X</span><div class="gres num"><div><b>1637<small> N</small></b><span>downforce</span></div><div><b>1954<small> N</small></b><span>drag</span></div><div><b>0.74<small> m²</small></b><span>C<sub>L</sub>A</span></div></div></figure>
+          <figure class="shot cut rv"><img src="tfg/car_r_z.webp" alt="Full car in Corner Mode" width="1342" height="974" loading="lazy"><span class="tag">Corner Mode · Z</span><div class="gres num"><div><b>3674<small> N</small></b><span>downforce</span></div><div><b>2213<small> N</small></b><span>drag</span></div><div><b>1.67<small> m²</small></b><span>C<sub>L</sub>A</span></div></div></figure>
+          <figure class="shot cut rv" style="--d:.08s"><img src="tfg/car_r_x.webp" alt="Full car in Straight Mode, both wings at minimum incidence" width="1342" height="974" loading="lazy"><span class="tag">Straight Mode · X</span><div class="gres num"><div><b>1637<small> N</small></b><span>downforce</span></div><div><b>1954<small> N</small></b><span>drag</span></div><div><b>0.74<small> m²</small></b><span>C<sub>L</sub>A</span></div></div></figure>
         </div>
       </div>
 
@@ -810,7 +830,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
       </div>
       <figure class="drag rv"><span class="dw" role="img" aria-label="Line drawing: a boxy car held back by a giant made of air, above a streamlined car with a thin wake"></span></figure>
     </div>
-    <div class="small"><span>© 2026 Alex Aguilar Viel. All rights reserved.</span><span>Figures from the author's BSc thesis, Universitat Politècnica de València. Reference car geometry: GrabCAD.</span></div>
+    <div class="small"><span>© 2026 Alex Aguilar Viel. All rights reserved.</span><span>Figures from the author's BSc thesis, Universitat Politècnica de València. Reference car geometry: GrabCAD. Livery renders: Blender Cycles.</span></div>
   </div>
 </footer>
 
