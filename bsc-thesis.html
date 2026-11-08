@@ -530,8 +530,8 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
       <div class="blk geo">
         <div class="media">
           <div class="pair stack">
-            <figure class="shot cut rv"><img src="tfg/fw_r_v1.webp" alt="Front wing first version V1, rendered from CAD" width="1600" height="882" loading="lazy"><span class="tag">V1</span></figure>
-            <figure class="shot cut rv" style="--d:.08s"><img src="tfg/fw_r_v8.webp" alt="Front wing final version V8, rendered from CAD" width="1600" height="882" loading="lazy"><span class="tag">V8</span></figure>
+            <figure class="shot cut rv"><img src="tfg/fw_r_v1_c.webp" alt="Front wing first version V1, rendered from CAD" width="1600" height="882" loading="lazy"><span class="tag">V1</span></figure>
+            <figure class="shot cut rv" style="--d:.08s"><img src="tfg/fw_r_v8_c.webp" alt="Front wing final version V8, rendered from CAD" width="1600" height="882" loading="lazy"><span class="tag">V8</span></figure>
           </div>
         </div>
         <div>
@@ -649,8 +649,8 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
       <div class="blk rev geo">
         <div class="media">
         <div class="pair stack">
-            <figure class="shot cut rv"><img src="tfg/rw_r_v1.webp" alt="Rear wing first version V1, rendered from CAD" width="1600" height="952" loading="lazy"><span class="tag">V1</span></figure>
-            <figure class="shot cut rv" style="--d:.08s"><img src="tfg/rw_r_v7.webp" alt="Rear wing final version V7, rendered from CAD" width="1600" height="952" loading="lazy"><span class="tag">V7</span></figure>
+            <figure class="shot cut rv"><img src="tfg/rw_r_v1_c.webp" alt="Rear wing first version V1, rendered from CAD" width="1600" height="952" loading="lazy"><span class="tag">V1</span></figure>
+            <figure class="shot cut rv" style="--d:.08s"><img src="tfg/rw_r_v7_c.webp" alt="Rear wing final version V7, rendered from CAD" width="1600" height="952" loading="lazy"><span class="tag">V7</span></figure>
           </div>
         </div>
         <div>
@@ -788,9 +788,9 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 
   <section class="sec gut" id="explore">
     <div class="wrap">
-      <div class="head"><h2 class="rv">Explore in 3D</h2><p class="rv" style="--d:.05s">The final geometry of both wings, straight from the CAD. Switch between Corner Mode and Straight Mode to see what moves; the camera stays where you left it.</p></div>
+      <div class="head"><h2 class="rv">Explore in 3D</h2><p class="rv" style="--d:.05s">The final geometry of both wings, straight from the CAD, in my livery. Switch between Corner Mode and Straight Mode to see what moves; the camera stays where you left it.</p></div>
       <div class="viewer x3d rv" data-viewer>
-        <model-viewer src="tfg/fw_z.glb" data-fw-z="tfg/fw_z.glb" data-fw-x="tfg/fw_x.glb" data-rw-z="tfg/rw_z.glb" data-rw-x="tfg/rw_x.glb" camera-controls auto-rotate auto-rotate-delay="2500" rotation-per-second="12deg" interaction-prompt="none" camera-orbit="-38deg 68deg 3.9m" field-of-view="30deg" min-field-of-view="8deg" max-camera-orbit="auto auto 8m" environment-image="neutral" exposure="1.05" loading="lazy" touch-action="pan-y" alt="Interactive 3D model of the final wings, from the author's CAD"></model-viewer>
+        <model-viewer src="tfg/fw_z.glb" data-fw-z="tfg/fw_z.glb" data-fw-x="tfg/fw_x.glb" data-rw-z="tfg/rw_z.glb" data-rw-x="tfg/rw_x.glb" camera-controls auto-rotate auto-rotate-delay="2500" rotation-per-second="12deg" interaction-prompt="none" camera-orbit="-38deg 68deg 3.9m" field-of-view="30deg" min-field-of-view="8deg" max-camera-orbit="auto auto 8m" environment-image="neutral" exposure="1.05" loading="lazy" touch-action="pan-y" alt="Interactive 3D model of the final wings in the AAV livery"></model-viewer>
         <div class="ctrls">
           <div class="seg" role="group" aria-label="Wing"><button type="button" data-wing="fw" aria-pressed="true">Front wing</button><button type="button" data-wing="rw" aria-pressed="false">Rear wing</button></div>
           <div class="seg" role="group" aria-label="Aero mode"><button type="button" data-mode="z" aria-pressed="true">Corner Mode · Z</button><button type="button" data-mode="x" aria-pressed="false">Straight Mode · X</button></div>
