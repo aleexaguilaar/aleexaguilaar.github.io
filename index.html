@@ -408,7 +408,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .stage-car .cx{opacity:0;transform:scale(1.015)}
 .stage[data-mode="x"] .stage-car .cx{opacity:1;transform:none}
 .stage[data-mode="x"] .stage-car .cz{opacity:0;transform:scale(1.015)}
-@media (max-width:900px){.stage-row{grid-template-columns:1fr;align-items:start}}
+@media (max-width:900px){.stage-row{grid-template-columns:1fr;align-items:start}.stage-car{margin-top:clamp(20px,6vw,40px)}}
 @media (max-width:520px){.mode-figs{gap:18px}.mode-switch button{padding:0 14px;font-size:14px}}
 @media (prefers-reduced-motion:reduce){.stage-car img,.mode-switch button{transition:none}}
 /* thesis card: smaller, whole wings visible */
