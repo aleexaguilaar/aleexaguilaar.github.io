@@ -387,6 +387,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .cl{background:radial-gradient(100% 70% at 72% 62%,#1b3a4f 0%,#0b1a2e 62%)}
 .cl .cv-hl{width:50cqi}
 .cl-img{right:4cqi;width:46cqi;bottom:21cqi;height:auto}
+.projects,.project{min-width:0}.project{overflow:hidden}
 .rack{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(14px,2vw,28px);padding:clamp(18px,2.4vw,32px);border-radius:14px;background:var(--field-1)}
 .rk{display:grid;align-content:start}
 .rk .cover{box-shadow:0 22px 40px -18px rgba(0,0,0,.55)}
@@ -395,7 +396,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .rk-t{margin-top:6px;font-weight:700;font-size:clamp(15px,1.2vw,17.5px);line-height:1.25;color:var(--ink);transition:color .2s ease}
 @media (hover:hover) and (pointer:fine){.rk-t:hover{color:var(--accent)}}
 .rk-r{margin-top:4px;font-size:13px;color:var(--ink-3)}
-@media (max-width:900px){.rack{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:min(64%,240px);overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none}.rack::-webkit-scrollbar{display:none}.rk{scroll-snap-align:start}}
+@media (max-width:900px){.rack{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:min(62%,230px);overflow-x:auto;max-width:100%;padding:16px;margin-inline:-4px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none}.rack::-webkit-scrollbar{display:none}.rk{scroll-snap-align:start}}
 
 
 
@@ -427,7 +428,19 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 @media (max-width:520px){.mode-figs{gap:18px}.mode-switch button{padding:0 14px;font-size:14px}}
 @media (prefers-reduced-motion:reduce){.stage-car img,.mode-switch button{transition:none}}
 /* thesis card: smaller, whole wings visible */
-.slices,.slices figure{background:#07101d}.slices img{transform:none!important}.slices figure:hover img{transform:scale(1.04)!important}.slices figure:nth-child(1) img{padding:6% 16% 6% 4%!important}.slices figure:nth-child(2) img{padding:6% 4% 6% 16%!important}.slices{aspect-ratio:2.2/1!important}
+.slices,.slices figure{background:#07101d}.slices img{transform:none!important}.slices figure:hover img{transform:scale(1.04)!important}
+@media (max-width:640px){
+.project{padding:22px 18px 26px;border-radius:18px}
+.project h3{font-size:22px;margin-bottom:18px}
+.project .slices{aspect-ratio:auto!important;height:auto!important;display:grid;gap:10px;background:none!important}
+.project .slices figure{position:relative;width:100%;height:auto;aspect-ratio:1.75/1;clip-path:none!important;border-radius:12px}
+.project .slices figure img{padding:2%!important;object-fit:contain}
+.project .slices .cut{display:none}
+.project .figs{gap:18px 16px;margin-top:22px}
+.rack{grid-auto-columns:72%;padding:14px;gap:14px;border-radius:12px}
+.rk-k{font-size:11.5px}
+}
+.slices figure:nth-child(1) img{padding:6% 16% 6% 4%!important}.slices figure:nth-child(2) img{padding:6% 4% 6% 16%!important}.slices{aspect-ratio:2.2/1!important}
 </style>
 </head>
 <body>
