@@ -387,7 +387,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 /* stage hero: always a dark field, theme-independent */
 .stage{--ground:#07101d;--ink:#eaf1fa;--ink-2:#b4c3d6;--ink-3:#8496ad;--accent:#7cc2f2;--accent-ink:#06111e;background:#07101d;color:var(--ink);padding-top:clamp(36px,6vh,72px);overflow:hidden}
 .stage-name{font-weight:900;font-size:clamp(46px,9.6vw,168px);line-height:.88;font-stretch:118%;letter-spacing:-.05em;color:var(--ink);white-space:normal;animation:up .8s var(--ease) both}
-.stage-row{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:clamp(24px,5vw,96px);align-items:end;margin-top:clamp(24px,3.4vw,48px)}
+.stage-row{display:grid;grid-template-columns:minmax(0,1fr);gap:clamp(24px,5vw,96px);align-items:end;margin-top:clamp(24px,3.4vw,48px)}
 .stage-copy{animation:up .8s var(--ease) .08s both}
 .stage .lede{font-size:clamp(18px,1.35vw,20px);line-height:1.5;color:var(--ink);max-width:56ch}
 .stage .cta{margin-top:26px;display:flex;gap:12px;flex-wrap:wrap}
@@ -441,7 +441,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 </header>
 
 <main id="top">
-  <section class="stage gut" id="hero" data-mode="z">
+  <section class="stage gut" id="hero">
     <div class="wrap">
       <h1 class="stage-name">Alex Aguilar Viel</h1>
       <div class="stage-row">
@@ -452,18 +452,10 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
             <a class="btn line" href="cv.pdf" target="_blank" rel="noopener">Download CV</a>
           </div>
         </div>
-        <div class="mode" role="group" aria-label="Active aero mode of the full car">
-          <div class="mode-switch">
-            <button type="button" class="on" data-set="z" aria-pressed="true">Corner Mode</button>
-            <button type="button" data-set="x" aria-pressed="false">Straight Mode</button>
-          </div>
-          <p class="mode-note">My wings on the 2026 car, in both active aero modes.</p>
-        </div>
       </div>
     </div>
     <figure class="stage-car">
       <img class="cz" src="tfg/hero_z.webp" srcset="tfg/hero_z_s.webp 1200w, tfg/hero_z.webp 2400w" sizes="100vw" alt="My front and rear wings on a 2026 F1 car in my AAV livery, Corner Mode" width="2400" height="889" fetchpriority="high">
-      <img class="cx" src="tfg/hero_x.webp" srcset="tfg/hero_x_s.webp 1200w, tfg/hero_x.webp 2400w" sizes="100vw" alt="The same car in Straight Mode, both wings at minimum incidence" width="2400" height="889" loading="lazy">
     </figure>
   </section>
 
@@ -658,13 +650,5 @@ document.documentElement.classList.add('js');
 })();
 </script>
 
-<script>
-(function(){var st=document.getElementById('hero');if(!st)return;var bs=st.querySelectorAll('.mode-switch button'),nums=st.querySelectorAll('.mode-figs b'),reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
-function tween(el,to){var dp=+(el.dataset.dp||0),from=parseFloat(el.textContent),t0=performance.now(),d=reduce?0:650;
- (function f(t){var k=d?Math.min(1,(t-t0)/d):1;k=1-Math.pow(1-k,3);el.textContent=(from+(to-from)*k).toFixed(dp);if(k<1)requestAnimationFrame(f)})(t0)}
-function set(m){st.dataset.mode=m;bs.forEach(function(b){var on=b.dataset.set===m;b.classList.toggle('on',on);b.setAttribute('aria-pressed',on)});nums.forEach(function(n){tween(n,parseFloat(n.dataset[m]))});var cx=st.querySelector('.cx');if(cx.loading==='lazy')cx.loading='eager'}
-bs.forEach(function(b){b.addEventListener('click',function(){set(b.dataset.set)})});
-})();
-</script>
 </body>
 </html>
