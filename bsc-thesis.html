@@ -387,13 +387,14 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .duo .lg{flex-direction:column;align-items:stretch}.duo .lg .cbar{flex-basis:auto;max-width:380px}
 .media>.lg{flex-direction:column;align-items:stretch}.media>.lg .cbar{flex-basis:auto;max-width:380px}
 .hero .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:36px}
-.slices,.slices figure{background:#07101d}.slices img{object-fit:cover;padding:0!important;transform:scale(1.02)}.slices figure:hover img{transform:scale(1.07)}
+
 .gal-hero,.gal-row figure{position:relative;margin:0;border-radius:20px;overflow:hidden;background:#07101d}
 .gal-hero img,.gal-row img{display:block;width:100%;height:auto}
 .gal-row{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(10px,1.4vw,18px);margin-top:clamp(10px,1.4vw,18px)}
 .gal-row figure{border-radius:14px}
 .gal-hero .tag,.gal-row .tag{position:absolute;left:12px;bottom:12px;padding:5px 11px;border-radius:999px;background:rgba(6,17,30,.72);color:#eef4fb;font-size:12.5px;font-weight:600;letter-spacing:.01em}
 @media (max-width:760px){.gal-row{grid-template-columns:1fr}}
+.slices,.slices figure{background:#07101d}.slices img{transform:none!important}.slices figure:hover img{transform:scale(1.04)!important}.slices figure:nth-child(1) img{padding:6% 16% 6% 4%!important}.slices figure:nth-child(2) img{padding:6% 4% 6% 16%!important}
 </style>
 <script type="module" src="tfg/model-viewer.min.js"></script>
 
@@ -433,8 +434,8 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
           <div class="cta"><a class="btn fill" href="https://www.linkedin.com/in/alex-aguilar-viel-b979a1293/details/projects/" target="_blank" rel="noopener">Read the full thesis <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a></div>
         </div>
         <div class="slices">
-          <figure><img src="tfg/fw_studio.webp" alt="Front wing, final version V8, rendered in the AAV livery" width="1600" height="900"></figure>
-          <figure><img src="tfg/rw_studio.webp" alt="Rear wing, final version V7, rendered in the AAV livery" width="1600" height="900"></figure>
+          <figure><img src="tfg/fw_slice.webp" alt="Front wing, final version V8, rendered in the AAV livery" width="1400" height="750"></figure>
+          <figure><img src="tfg/rw_slice.webp" alt="Rear wing, final version V7, rendered in the AAV livery" width="1101" height="710"></figure>
           <svg class="cut" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="55" y1="0" x2="45" y2="100"/></svg>
         </div>
       </div>

@@ -382,7 +382,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .ci .cv-kick{background:#e08a4b}
 .ci-img{left:-4cqi;width:110cqi;bottom:24cqi;height:auto;filter:drop-shadow(0 2cqi 3cqi rgba(0,0,0,.5))}
 .ci .cv-stat b{color:#e8a06b}
-.slices,.slices figure{background:#07101d}.slices img{object-fit:cover;padding:0!important;transform:scale(1.02)}.slices figure:hover img{transform:scale(1.07)}
+
 
 /* stage hero: always a dark field, theme-independent */
 .stage{--ground:#07101d;--ink:#eaf1fa;--ink-2:#b4c3d6;--ink-3:#8496ad;--accent:#7cc2f2;--accent-ink:#06111e;background:#07101d;color:var(--ink);padding-top:clamp(36px,6vh,72px);overflow:hidden}
@@ -412,9 +412,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 @media (max-width:520px){.mode-figs{gap:18px}.mode-switch button{padding:0 14px;font-size:14px}}
 @media (prefers-reduced-motion:reduce){.stage-car img,.mode-switch button{transition:none}}
 /* thesis card: smaller, whole wings visible */
-.slices{aspect-ratio:2.5/1!important}
-.slices img{object-fit:contain!important;transform:none!important}
-.slices figure:hover img{transform:scale(1.04)!important}
+.slices,.slices figure{background:#07101d}.slices img{transform:none!important}.slices figure:hover img{transform:scale(1.04)!important}.slices figure:nth-child(1) img{padding:6% 16% 6% 4%!important}.slices figure:nth-child(2) img{padding:6% 4% 6% 16%!important}.slices{aspect-ratio:2.2/1!important}
 </style>
 </head>
 <body>
@@ -537,8 +535,8 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
         <article class="project rv">
           <h3><a href="bsc-thesis.html">BSc Thesis: Front &amp; Rear Wing Design for a 2026 F1 Car ↗</a></h3>
           <a class="slices" href="bsc-thesis.html" aria-label="Open the BSc thesis project page">
-            <figure><img src="tfg/fw_studio.webp" alt="Front wing render in the AAV livery: navy paint over exposed carbon" width="1600" height="900" loading="lazy"></figure>
-            <figure><img src="tfg/rw_studio.webp" alt="Rear wing render in the AAV livery: navy endplates and carbon elements" width="1600" height="900" loading="lazy"></figure>
+            <figure><img src="tfg/fw_slice.webp" alt="Front wing render in the AAV livery: navy paint over exposed carbon" width="1400" height="750" loading="lazy"></figure>
+            <figure><img src="tfg/rw_slice.webp" alt="Rear wing render in the AAV livery: navy endplates and carbon elements" width="1101" height="710" loading="lazy"></figure>
             <svg class="cut" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="55" y1="0" x2="45" y2="100"/></svg>
           </a>
           <p class="desc">Design and CFD optimisation of a multi-element front and rear wing under the FIA 2026 Technical Regulations, from 2D airfoil screening to a full-car study of the new active aero modes, Corner Mode (Z) and Straight Mode (X).</p>
