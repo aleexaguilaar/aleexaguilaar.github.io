@@ -442,6 +442,13 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .ci-img{left:0;width:100cqi;bottom:19cqi;height:auto;filter:drop-shadow(0 2cqi 3cqi rgba(0,0,0,.5))}
 .ci .cv-stat b{color:#e8a06b}
 
+.ca{background:radial-gradient(110% 70% at 50% 72%,#123a5e 0%,#0b1a2e 62%)}
+.ca-img{left:4cqi;width:92cqi;bottom:25cqi;height:auto}
+
+.cl{background:radial-gradient(100% 70% at 72% 62%,#1b3a4f 0%,#0b1a2e 62%)}
+.cl .cv-hl{width:50cqi}
+.cl-img{right:4cqi;width:46cqi;bottom:21cqi;height:auto}
+
 /* articles hub */
 .acover{width:min(100%,340px);justify-self:center}
 .acard{grid-template-columns:minmax(0,340px) minmax(0,1fr)!important}
@@ -494,7 +501,7 @@ a.chip:active{transform:scale(.97)}
 <header class="bar gut">
   <div class="wrap">
     <a class="logo" href="index.html" aria-label="Alex Aguilar Viel, portfolio home"></a>
-    <nav class="nav" aria-label="Sections"><a href="#data-analysis">Data &amp; Analysis</a><a href="#powertrain">Powertrain</a><a href="#contact">Contact</a></nav>
+    <nav class="nav" aria-label="Sections"><a href="#data-analysis">Data &amp; Analysis</a><a href="#powertrain">Powertrain</a><a href="#aerodynamics">Aerodynamics</a><a href="#vehicle-dynamics">Vehicle Dynamics</a><a href="#contact">Contact</a></nav>
     <div class="bar-r">
       <a class="btn line back" href="index.html"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg><span class="t">Portfolio</span></a>
       <button class="tt" id="theme-toggle" type="button" aria-label="Switch between light and dark theme">
@@ -513,18 +520,18 @@ a.chip:active{transform:scale(.97)}
         <div class="hero-text">
           <p class="status"><i></i>Articles · Race-car engineering</p>
           <h1>Articles</h1>
-          <p class="lede">Technical notes on how race cars are measured, understood and made faster. Each one explains the physics, builds the method and tests it on data. Grouped by area, with more areas on the way.</p>
-          <nav class="chips" aria-label="Areas"><a class="chip" href="#data-analysis">Data &amp; Analysis<b>1</b></a><a class="chip" href="#powertrain">Powertrain<b>1</b></a><span class="chip off">Aerodynamics<i>Soon</i></span><span class="chip off">Vehicle Dynamics<i>Soon</i></span></nav>
+          <p class="lede">Technical notes on how race cars are measured, understood and made faster. Each one explains the physics, builds the method and tests it on data. Grouped by area, with more articles on the way.</p>
+          <nav class="chips" aria-label="Areas"><a class="chip" href="#data-analysis">Data &amp; Analysis<b>1</b></a><a class="chip" href="#powertrain">Powertrain<b>1</b></a><a class="chip" href="#aerodynamics">Aerodynamics<b>1</b></a><a class="chip" href="#vehicle-dynamics">Vehicle Dynamics<b>1</b></a></nav>
         </div>
         <div class="hub-cover"><a class="cover cs" href="articles.html" aria-label="Tech Notes: race-car engineering articles by area. Open the articles page">
   <span class="cv-top"><span>Vol. 1</span><span>Race-car engineering, explained</span><span>2026</span></span>
   <span class="cv-mast">Tech<b>Notes</b></span>
   <span class="cv-by">by Alex Aguilar Viel</span>
-  <span class="cs-list"><span class="cs-row"><span class="cs-k">Data &amp; Analysis<i>Nº 01</i></span><span class="cs-t">Downforce from the dampers</span></span><span class="cs-row"><span class="cs-k">Powertrain<i>Nº 02</i></span><span class="cs-t">Why F1 engines burn lean</span></span><span class="cs-row off"><span class="cs-k">Aerodynamics<i>Soon</i></span><span class="cs-t">Wings, floors and wakes</span></span><span class="cs-row off"><span class="cs-k">Vehicle Dynamics<i>Soon</i></span><span class="cs-t">Tyres, balance and setup</span></span></span>
+  <span class="cs-list"><span class="cs-row"><span class="cs-k">Data &amp; Analysis<i>Nº 01</i></span><span class="cs-t">Downforce from the dampers</span></span><span class="cs-row"><span class="cs-k">Powertrain<i>Nº 02</i></span><span class="cs-t">Why F1 engines burn lean</span></span><span class="cs-row"><span class="cs-k">Aerodynamics<i>Nº 03</i></span><span class="cs-t">Why F1 draws its own airfoils</span></span><span class="cs-row"><span class="cs-k">Vehicle Dynamics<i>Nº 04</i></span><span class="cs-t">What a tenth is made of</span></span></span>
   <img class="cs-car" src="dpd/gt3.webp" alt="" width="1100" height="763" loading="lazy">
   <span class="cv-foot cs-foot">
-    <span class="cv-stat"><b>4</b><span>areas,<br>one method each</span></span>
-    <span class="cv-next"><b>Out now</b>Nº 02 · Powertrain</span>
+    <span class="cv-stat"><b>4</b><span>issues,<br>4 areas</span></span>
+    <span class="cv-next"><b>Out now</b>Nº 04 · Vehicle Dynamics</span>
     <span class="cv-bar" aria-hidden="true"></span>
   </span>
 </a></div>
@@ -584,6 +591,62 @@ a.chip:active{transform:scale(.97)}
             <p class="desc">Since 2014 F1 limits fuel flow, not engine size, so power is efficiency. A 0D model of the 1.6 L V6 with a knock criterion shows why the engines run lean with pre-chamber ignition, where that stops paying, and what the 2026 rules change.</p>
             <div class="figs num"><div><b>52.0<em>%</em></b><span>peak efficiency, pre-chamber</span></div><div><b>+2.8<em> pts</em></b><span>over a spark plug</span></div><div><b>−32<em>%</em></b><span>indicated power in 2026</span></div></div>
             <a class="more" href="f1-lean-burn.html">Read the article <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+  <section class="sec f1 gut" id="aerodynamics">
+    <div class="wrap">
+      <div class="head"><h2 class="rv">Aerodynamics</h2><p class="rv" style="--d:.05s">How the shapes on a car turn air into grip. <span class="cnt">1 article</span></p></div>
+      <div class="alist">
+        <article class="acard rv">
+          <div class="acover"><a class="cover ca" href="f1-airfoils.html" aria-label="Tech Notes issue 03: Why F1 teams draw their own airfoils. Open the article">
+  <span class="cv-top"><span>Nº 03</span><span>Race-car engineering, explained</span><span>Nov 2026</span></span>
+  <span class="cv-mast">Tech<b>Notes</b></span>
+  <span class="cv-by">by Alex Aguilar Viel</span>
+  <span class="cv-hl"><span class="cv-kick">Aerodynamics</span><span class="cv-h">Not a NACA in sight</span><span class="cv-dk">Why F1 draws its own airfoils.</span></span>
+  <img class="ca-img" src="aer/cover-airfoil.webp" alt="" width="843" height="241">
+  <span class="cv-foot">
+    <span class="cv-stat"><b>+40%</b><span>downforce,<br>same drag</span></span>
+    <span class="cv-next"><b>Next issue</b>Vehicle Dynamics</span>
+    <span class="cv-bar" aria-hidden="true"></span>
+  </span>
+</a></div>
+          <div class="abody">
+            <p class="meta">Nov 2026 · 9 min read</p>
+            <h3><a href="f1-airfoils.html">Why F1 teams draw their own airfoils</a></h3>
+            <p class="desc">Catalogue airfoils were designed for other jobs. A section optimised for F1 conditions with NeuralFoil and checked in XFOIL makes 40% more downforce than the Selig S1223 for the same drag, and a panel method with a mirror-image wing shows what the ground does to it.</p>
+            <div class="figs num"><div><b>+40<em>%</em></b><span>downforce, same drag</span></div><div><b>2.68</b><span>max C<sub>L</sub>, single element</span></div><div><b>×9</b><span>suction peak near the ground</span></div></div>
+            <a class="more" href="f1-airfoils.html">Read the article <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+  <section class="sec f2 gut" id="vehicle-dynamics">
+    <div class="wrap">
+      <div class="head"><h2 class="rv">Vehicle Dynamics</h2><p class="rv" style="--d:.05s">How a car uses its grip, corner by corner. <span class="cnt">1 article</span></p></div>
+      <div class="alist">
+        <article class="acard rv">
+          <div class="acover"><a class="cover cl" href="lap-time.html" aria-label="Tech Notes issue 04: What a tenth is made of. Open the article">
+  <span class="cv-top"><span>Nº 04</span><span>Race-car engineering, explained</span><span>Nov 2026</span></span>
+  <span class="cv-mast">Tech<b>Notes</b></span>
+  <span class="cv-by">by Alex Aguilar Viel</span>
+  <span class="cv-hl"><span class="cv-kick">Vehicle Dynamics</span><span class="cv-h">What a tenth is made of</span><span class="cv-dk">Lap time, priced in kg and kW.</span></span>
+  <img class="cl-img" src="lap/cover-track.webp" alt="" width="538" height="637">
+  <span class="cv-foot">
+    <span class="cv-stat"><b>7 kg</b><span>is worth<br>a tenth</span></span>
+    <span class="cv-next"><b>Inside</b>Live lap<br>simulator</span>
+    <span class="cv-bar" aria-hidden="true"></span>
+  </span>
+</a></div>
+          <div class="abody">
+            <p class="meta">Nov 2026 · 9 min read</p>
+            <h3><a href="lap-time.html">What a tenth is made of</a></h3>
+            <p class="desc">A lap-time simulator running live in the page prices every design choice on a GT3-class car at Barcelona: mass, power, downforce, drag, centre of gravity and balance. Balance turns out to be worth more than parts.</p>
+            <div class="figs num"><div><b>7.0<em> kg</em></b><span>per tenth</span></div><div><b>3.4<em> kW</em></b><span>per tenth</span></div><div><b>0.5<em> s</em></b><span>for 5% roll stiffness off balance</span></div></div>
+            <a class="more" href="lap-time.html">Read the article <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
           </div>
         </article>
       </div>
