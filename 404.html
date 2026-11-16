@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Page not found · Alex Aguilar Viel</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#07101d" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#eaf2fb" media="(prefers-color-scheme: light)">
+<link rel="icon" href="/favicon.png">
+<link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:"Inter";font-style:normal;font-weight:400 700;font-display:swap;src:url(/fonts/inter-latin.woff2) format("woff2")}
+@font-face{font-family:"Archivo";font-style:normal;font-weight:500 900;font-stretch:100% 125%;font-display:swap;src:url(/fonts/archivo-latin.woff2) format("woff2")}
+:root{--ground:#07101d;--field:#0b1729;--ink:#eaf1fa;--ink-2:#b4c3d6;--accent:#7cc2f2;--accent-ink:#06111e;--line:rgba(170,200,235,.12);color-scheme:dark}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){--ground:#eaf2fb;--field:#dde9f6;--ink:#0b1b30;--ink-2:#2f4560;--accent:#1765a8;--accent-ink:#fff;--line:rgba(18,62,110,.15);color-scheme:light}}
+:root[data-theme="light"]{--ground:#eaf2fb;--field:#dde9f6;--ink:#0b1b30;--ink-2:#2f4560;--accent:#1765a8;--accent-ink:#fff;--line:rgba(18,62,110,.15);color-scheme:light}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;background:var(--ground);color:var(--ink);font-family:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;display:grid;grid-template-rows:auto 1fr;-webkit-font-smoothing:antialiased}
+header{padding:19px clamp(20px,5vw,56px)}
+.logo{display:block;width:84px;height:38px;background:var(--accent);-webkit-mask:url(/tfg/logo.webp) left center/contain no-repeat;mask:url(/tfg/logo.webp) left center/contain no-repeat}
+main{display:grid;align-content:center;padding:0 clamp(20px,5vw,56px) 12vh;max-width:1100px}
+.k{margin:0 0 18px;font-size:14px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+h1{margin:0;font-family:"Archivo","Inter",system-ui,sans-serif;font-stretch:115%;font-weight:900;font-size:clamp(44px,9vw,104px);line-height:.95;letter-spacing:-.02em}
+h1 span{color:var(--accent)}
+p{margin:26px 0 0;max-width:48ch;font-size:clamp(17px,1.5vw,20px);line-height:1.55;color:var(--ink-2)}
+nav{display:flex;flex-wrap:wrap;gap:12px;margin-top:36px}
+a.btn{display:inline-flex;align-items:center;min-height:48px;padding:0 22px;border-radius:999px;font-weight:600;font-size:16px;text-decoration:none;color:var(--ink);border:1px solid var(--line);transition:transform .16s cubic-bezier(.23,1,.32,1),background-color .2s ease}
+a.btn.solid{background:var(--accent);color:var(--accent-ink);border-color:transparent}
+a.btn:active{transform:scale(.97)}
+a.btn:focus-visible,.logo:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+@media (hover:hover) and (pointer:fine){a.btn:not(.solid):hover{background:var(--field)}}
+</style>
+</head>
+<body>
+<header><a class="logo" href="/" aria-label="Alex Aguilar Viel, portfolio home"></a></header>
+<main>
+  <p class="k">Error 404</p>
+  <h1>Off the <span>racing line.</span></h1>
+  <p>This page does not exist, or it has moved. The portfolio, the thesis and the articles are all one click away.</p>
+  <nav aria-label="Where to go">
+    <a class="btn solid" href="/">Back to the portfolio</a>
+    <a class="btn" href="/bsc-thesis.html">BSc thesis</a>
+    <a class="btn" href="/articles.html">Articles</a>
+  </nav>
+</main>
+<script>try{var t=localStorage.getItem('aav-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+</body>
+</html>
